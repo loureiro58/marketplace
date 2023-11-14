@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Content } from './styles';
-import {FaTimes, FaPercentage, FaProductHunt, FaRegFileAlt, FaChartBar, FaAddressCard, FaAccusoft, FaAcquisitionsIncorporated } from 'react-icons/fa';
+import {FaTimes, FaPercentage, FaProductHunt, FaRegFileAlt, FaChartBar, FaAcquisitionsIncorporated } from 'react-icons/fa';
 import SidebarItem from '../SidebarItem';
 
 const Sidebar = ({active}) => {
