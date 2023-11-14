@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+:root{
+	--azul: rgb(42, 23, 216);
+	--preto:#000;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+	font-family: 'Roboto-Regular', sans-serif, Verdana, Tahoma, sans-serif;
+}
+
+body{
+	width: 100vw;
+	height: 100vh;	  
+}
+
