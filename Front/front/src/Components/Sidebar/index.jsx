@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Content } from './styles';
-import {FaTimes, FaPercentage, FaProductHunt, FaRegFileAlt, FaChartBar } from 'react-icons/fa';
+import {FaTimes, FaPercentage, FaProductHunt, FaRegFileAlt, FaChartBar, FaAddressCard, FaAccusoft, FaAcquisitionsIncorporated } from 'react-icons/fa';
 import SidebarItem from '../SidebarItem';
 
 const Sidebar = ({active}) => {
@@ -14,6 +14,7 @@ const Sidebar = ({active}) => {
                 <SidebarItem Icon={FaRegFileAlt} Text="Tipos de produto" action = "/productType"/>
                 <SidebarItem Icon={FaProductHunt} Text="Produtos" action = "/product"/>
                 <SidebarItem Icon={FaPercentage} Text="Taxas" action = "/Tax"/>
+                <SidebarItem Icon={FaAcquisitionsIncorporated} Text="Associar taxa ao tipo de produto" action = "/taxProductType"/>
                 <SidebarItem Icon={FaChartBar} Text="Vendas" action = "/saleSearch" />
             </Content>
         </Container>

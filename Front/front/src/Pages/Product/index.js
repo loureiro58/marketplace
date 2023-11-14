@@ -14,7 +14,7 @@ export default class Product extends Component {
             products: [],
             price: '',
             name: '',
-            productTypeId: 0,
+            productTypeId: 1,
             productsType: [],
         }
 

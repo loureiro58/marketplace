@@ -65,7 +65,6 @@ class ProductTypeController{
             $many = $count[0]->getData();
             
             if($many["count"] <= 0){          
-                var_dump("text");      
                 $productType = new ProductType();
                 $dropped = $productType->delete($id);
                              

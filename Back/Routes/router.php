@@ -38,6 +38,10 @@
                         load("TaxController", "index");
                         break; 
                     }
+                    case "/taxProductType/index": {
+                        load("TaxProductTypeController", "index");
+                        break; 
+                    }
                     case "/productType/index": {
                         load("ProductTypeController", "index");
                         break; 
@@ -53,6 +57,14 @@
                 break;
             case "POST":
                 switch ($way) {
+                    case "/taxProductType/store": {
+                        load("TaxProductTypeController", "store");
+                        break;                        
+                    }
+                    case "/taxProductType/drop": {
+                        load("TaxProductTypeController", "drop");
+                        break;                        
+                    }
                     case "/sale/store": {
                         load("SaleController", "store");
                         break;                        

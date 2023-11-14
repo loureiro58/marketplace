@@ -11,6 +11,7 @@ import ProductType from "../ProductType";
 import Tax from "../Tax";
 import Sale from "../Sale";
 import SaleSearch from "../Sale/search";
+import TaxProductType from "../TaxProductType";
 
 const router = createBrowserRouter([
   { path: "/sale", Component: Sale },
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
   { path: "/tax", Component: Tax },
   { path: "/product", Component: Product },
   { path: "/productType", Component: ProductType },
+  { path: "/taxProductType", Component: TaxProductType },
   { path: "*", Component: Root },
 ]);
 
