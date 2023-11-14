@@ -14,6 +14,7 @@ import SaleSearch from "../Sale/search";
 import TaxProductType from "../TaxProductType";
 
 const router = createBrowserRouter([
+  { path: "/", Component: ProductType },
   { path: "/sale", Component: Sale },
   { path: "/saleSearch", Component: SaleSearch },
   { path: "/tax", Component: Tax },
