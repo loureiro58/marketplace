@@ -57,6 +57,10 @@
                 break;
             case "POST":
                 switch ($way) {
+                    case "/login": {
+                        load("LoginController", "auth");
+                        break;                        
+                    }
                     case "/taxProductType/store": {
                         load("TaxProductTypeController", "store");
                         break;                        

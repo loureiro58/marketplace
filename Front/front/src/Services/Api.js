@@ -17,6 +17,7 @@ export async function api(url, requestOptions = {}) {
     return login();
   }
 }
+
 export async function apiWithToken(url, requestOptions = {}) {
     return next(url, requestOptions);    
 }
@@ -40,7 +41,6 @@ async function checkToken() {
 export function login() {
   alert('Sessão expirada! Faça o login novamente.');
   localStorage.removeItem('token');
-  localStorage.removeItem('permissions');
   window.location.href = "/";
 
   return new Promise();

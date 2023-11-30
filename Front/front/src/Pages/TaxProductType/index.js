@@ -24,6 +24,11 @@ export default class TaxProductType extends Component {
     }
 
     componentDidMount() {
+        let token = localStorage.getItem('token');        
+        if(token === null || token === undefined){            
+            window.location.href = "/";
+        }
+        
         this.getTypes();
         this.getTaxs();
         this.getData();

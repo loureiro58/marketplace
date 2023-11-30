@@ -25,6 +25,11 @@ export default class Product extends Component {
     }
 
     componentDidMount() {
+        let token = localStorage.getItem('token');        
+        if(token === null || token === undefined){            
+            window.location.href = "/";
+        }
+        
         this.getTypes();
         this.getData();
     }
@@ -145,7 +150,7 @@ export default class Product extends Component {
 
     render() {
         return (
-                                                                                                                                                                                                                       <>
+            <>
                 <Header/>
                 <div className="container-fluid">
                     <div className="row-col d-flex justify-content-center mt-4 mb-4">

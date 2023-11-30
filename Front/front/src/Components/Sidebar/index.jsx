@@ -1,6 +1,6 @@
 import React from 'react';
 import {Container, Content } from './styles';
-import {FaTimes, FaPercentage, FaProductHunt, FaRegFileAlt, FaChartBar, FaAcquisitionsIncorporated } from 'react-icons/fa';
+import {FaTimes, FaPercentage, FaProductHunt, FaRegFileAlt, FaChartBar, FaAcquisitionsIncorporated, FaExclamation } from 'react-icons/fa';
 import SidebarItem from '../SidebarItem';
 
 const Sidebar = ({active}) => {
@@ -11,11 +11,12 @@ const Sidebar = ({active}) => {
         <Container sidebar={active} style={{zIndex:10}}>
             <FaTimes onClick={closeSidebar}/>
             <Content>
-                <SidebarItem Icon={FaRegFileAlt} Text="Tipos de produto" action = "/productType"/>
-                <SidebarItem Icon={FaProductHunt} Text="Produtos" action = "/product"/>
-                <SidebarItem Icon={FaPercentage} Text="Taxas" action = "/Tax"/>
-                <SidebarItem Icon={FaAcquisitionsIncorporated} Text="Associar taxa ao tipo de produto" action = "/taxProductType"/>
-                <SidebarItem Icon={FaChartBar} Text="Vendas" action = "/saleSearch" />
+                <SidebarItem id="productType" Icon={FaRegFileAlt} Text="Tipos de produto" action = "/productType"/>
+                <SidebarItem id="product" Icon={FaProductHunt} Text="Produtos" action = "/product"/>
+                <SidebarItem id="tax" Icon={FaPercentage} Text="Taxas" action = "/Tax"/>
+                <SidebarItem id="taxProductType" Icon={FaAcquisitionsIncorporated} Text="Associar taxa ao tipo de produto" action = "/taxProductType"/>
+                <SidebarItem id= "sale" Icon={FaChartBar} Text="Vendas" action = "/saleSearch" />
+                <SidebarItem id= "logout" Icon={FaExclamation} Text="Logout" action = "/" />
             </Content>
         </Container>
     )

@@ -1,7 +1,6 @@
 import * as React from "react";
 import {
   createBrowserRouter,
-  Route,
   RouterProvider,
   Routes,
 } from "react-router-dom";
@@ -12,9 +11,10 @@ import Tax from "../Tax";
 import Sale from "../Sale";
 import SaleSearch from "../Sale/search";
 import TaxProductType from "../TaxProductType";
+import Login from "../Login";
 
 const router = createBrowserRouter([
-  { path: "/", Component: ProductType },
+  { path: "/", Component: Login },
   { path: "/sale", Component: Sale },
   { path: "/saleSearch", Component: SaleSearch },
   { path: "/tax", Component: Tax },

@@ -18,7 +18,12 @@ export default class ProductType extends Component {
     }
 
     componentDidMount() {
-        this.getData();
+        let token = localStorage.getItem('token');        
+        if(token === null || token === undefined){            
+            window.location.href = "/";
+        }
+
+        this.getData();        
     }
 
     async getData() {

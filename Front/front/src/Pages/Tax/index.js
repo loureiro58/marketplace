@@ -20,6 +20,11 @@ export default class Tax extends Component {
     }
 
     componentDidMount() {
+        let token = localStorage.getItem('token');        
+        if(token === null || token === undefined){            
+            window.location.href = "/";
+        }
+        
         this.getData();
     }
 
