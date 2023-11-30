@@ -17,6 +17,8 @@ Após realizar o clone do repositório, realize os seguintes passos para subir o
 4 - Gere o arquivo autoload executando no terminal: composer dump-autoload <br/>
 5 - Acesse a pasta public e rode o comando php -S localhost:8080 para startar o servidor emutido. <br/>
 
+Observação: caso tenha dificuldades de instalar o php ou habilitar o servidor embutido no recomendo assistir o vídeo https://www.youtube.com/watch?v=HzIXZVctwI8
+
 ## Para subir o projeto React.js
 
 1 - Abra o terminal ou prompt de comando. <br/>
