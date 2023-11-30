@@ -24,3 +24,4 @@ Observação: caso tenha dificuldades de instalar o php ou habilitar o servidor 
 1 - Abra o terminal ou prompt de comando. <br/>
 2 - Acesse a pasta Front\front e rode o comando npm install para instalar as dependências do projeto. <br/>
 3 - Ao finalizar a instalação das dependências executo o comando yarn start para startar a aplicação. <br/>
+4 - Para fazer login na aplicação utlize o usuário admin e senha admin.
