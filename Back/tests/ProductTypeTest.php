@@ -3,42 +3,39 @@
 namespace tests;
 
 use app\model\ProductType;
+use PHPUnit\Framework\TestCase;
 
-class ProductTypeTest 
+class ProductTypeTest extends TestCase
 { 
-    public function test(): void
+    public function test_create()
     {
-        echo "Início teste unitário da classe ProductType:";
-
         $type = new ProductType(); 
-        $type->name = "Suvenir";
+        $type->name = "Almoxarife";
         $saved = $type->save();
 
-        if($saved){
-            echo "Tipo de produto criado";
-
-            $type1 = new ProductType();
-            $type1 = $type1->getByName("Suvenir");
-
-            echo "Tipo de produto recuperado";
-            
-            $type1->name = "Estofados";
-            $saved = $type1->save();
-
-            if($saved){
-                echo "Tipo de produto atualizado";
-                $dropped = $type1->delete($type->id);
-
-                if($dropped){
-                    echo "Tipo de produto removido";
-                }
-
-            }
-
-
-        }
-
-        echo "Término teste unitário da classe ProductType";
-
+        $this->assertTrue($saved);
     }
+ 
+    public function test_read_update_delete(){
+
+        $type1 = new ProductType();
+        $type1 = $type1->getByName("Almoxarife");
+    
+        $this->assertNotNull($type1->id);
+    
+        $type1->name = "Logistica";
+        $saved = $type1->saveOrUpdate();
+
+        $this->assertTrue($saved);
+
+        if($saved){
+ 
+            $dropped = $type1->delete($type1->id);
+    
+            $this->assertTrue($dropped);
+         
+        }
+    
+    }
+
 }

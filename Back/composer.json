@@ -11,5 +11,7 @@
             "email": "loureiro58@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
 }

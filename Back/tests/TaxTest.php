@@ -3,43 +3,43 @@
 namespace tests;
 
 use app\model\Tax;
+use PHPUnit\Framework\TestCase;
 
-class TaxTest 
+class TaxTest extends TestCase
 { 
     public function testTax(): void
     {
-        echo "Início teste unitário da classe Tax:";
 
         $tax = new Tax(); 
         $tax->name = "CPMF";
         $tax->percentage = 15.4;
         $saved = $tax->save();
 
-        if($saved){
-            echo "Taxa criada";
+        $this->assertTrue($saved);
 
+        if($saved){
+        
             $tax1 = new Tax();
             $tax1 = $tax1->getByName("CPMF");
 
-            echo "Taxa recuperada do banco";
+            $this->assertNotNull($tax1->id);
             
             $tax1->percentage = 8.3;
-            $saved = $tax1->save();
+            $saved = $tax1->saveOrUpdate();
+
+            $this->assertTrue($saved);
 
             if($saved){
-                echo "Taxa atualizada";
-                $dropped = $tax1->delete($tax->id);
 
-                if($dropped){
-                    echo "Taxa removida";
-                }
+                $dropped = $tax1->delete($tax1->id);
+
+                $this->assertTrue($dropped);
 
             }
 
 
         }
 
-        echo "Término teste unitário da classe Tax";
 
     }
 }
